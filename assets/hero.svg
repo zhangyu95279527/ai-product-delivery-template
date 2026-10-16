@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b1f"/>
+      <stop offset="0.55" stop-color="#0b1136"/>
+      <stop offset="1" stop-color="#101a4a"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="haloCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+
+  <circle cx="120" cy="80" r="180" fill="url(#haloCyan)"/>
+  <circle cx="1080" cy="300" r="200" fill="url(#haloViolet)"/>
+  <circle cx="980" cy="60" r="120" fill="url(#haloCyan)"/>
+
+  <g stroke="#22d3ee" stroke-opacity="0.25" fill="none">
+    <path d="M0 320 L220 250 L420 300"/>
+    <path d="M1200 40 L1000 110 L820 60"/>
+  </g>
+  <g fill="#22d3ee" opacity="0.5">
+    <circle cx="220" cy="250" r="2.5"/>
+    <circle cx="420" cy="300" r="2.5"/>
+    <circle cx="1000" cy="110" r="2.5"/>
+    <circle cx="820" cy="60" r="2.5"/>
+  </g>
+  <g fill="#a78bfa" opacity="0.45">
+    <circle cx="90" cy="290" r="2"/>
+    <circle cx="1140" cy="180" r="2"/>
+    <circle cx="640" cy="42" r="2"/>
+    <circle cx="320" cy="56" r="2"/>
+  </g>
+
+  <text x="600" y="118" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="46" font-weight="700" fill="#f1f5ff" filter="url(#glow)">AI 产品交付模板</text>
+  <text x="600" y="158" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="15" letter-spacing="4" fill="#67e8f9">AI PRODUCT DELIVERY TEMPLATE</text>
+
+  <g filter="url(#glow)">
+    <path d="M150 236 H1050" stroke="url(#flow)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 6"/>
+  </g>
+
+  <g font-family="Consolas, Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle">
+    <g filter="url(#glow)">
+      <circle cx="150" cy="236" r="17" fill="#0b1136" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="300" cy="236" r="17" fill="#0b1136" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="450" cy="236" r="17" fill="#0b1136" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="600" cy="236" r="17" fill="#0b1136" stroke="#a78bfa" stroke-width="2"/>
+      <circle cx="750" cy="236" r="17" fill="#0b1136" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="900" cy="236" r="17" fill="#0b1136" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="1050" cy="236" r="17" fill="#0b1136" stroke="#a78bfa" stroke-width="2"/>
+    </g>
+    <text x="150" y="241" fill="#a5f3fc">G1</text>
+    <text x="300" y="241" fill="#a5f3fc">G2</text>
+    <text x="450" y="241" fill="#a5f3fc">GA</text>
+    <text x="600" y="241" fill="#ddd6fe">G3</text>
+    <text x="750" y="241" fill="#a5f3fc">G4</text>
+    <text x="900" y="241" fill="#a5f3fc">G5</text>
+    <text x="1050" y="241" fill="#ddd6fe">GB</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="12" fill="#94a3d8" text-anchor="middle">
+    <text x="150" y="282">发现</text>
+    <text x="300" y="282">需求</text>
+    <text x="450" y="282">架构基线</text>
+    <text x="600" y="282">就绪</text>
+    <text x="750" y="282">验证</text>
+    <text x="900" y="282">发布</text>
+    <text x="1050" y="282">架构演进</text>
+  </g>
+
+  <text x="600" y="326" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="14" fill="#c7d2fe">人做门决策 · agent 代劳执行 · 制品即记忆</text>
+</svg>

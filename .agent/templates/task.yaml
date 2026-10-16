@@ -1,0 +1,13 @@
+id: TASK-0001
+pbi_id: PBI-0001
+status: draft # 执行态: draft | ready | in-progress | in-verification | done
+objective: ""
+depends_on: []
+inputs: []
+affected_repositories: []
+affected_components: []
+allowed_scope: []
+verification: []
+executor:
+  mode: agent # human | agent | hybrid
+  adapter: codex

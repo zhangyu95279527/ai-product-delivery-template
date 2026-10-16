@@ -1,0 +1,137 @@
+version: 1
+
+# 制品生命周期状态机
+# document_states 适用于文档类制品: Product Brief / PRD / Architecture Baseline / ADR / 设计稿
+# execution_states 适用于执行类制品: PBI / Task
+# living 表示"已批准但持续演化"的活文档, 通过受控变更更新
+artifact_lifecycle:
+  document_states: [draft, in-review, approved, living, superseded]
+  execution_states: [draft, ready, in-progress, in-verification, done]
+  living_applies_to:
+    - docs/product/prd
+    - docs/architecture/architecture-baseline.md
+
+# 门定义: 门挂在制品上, 不挂在时间上
+# decision 取值: go(放行) | recycle(打回上游, 正常迭代结果) | hold(外部条件挂起)
+gates:
+  - id: G1
+    name: charter-gate
+    applies_to: product-brief # docs/product/product-brief.md
+    scope: product
+    cadence: once-per-product-reopenable
+    decision_maker: product-owner
+    human_decision_required: true
+    criteria:
+      - id: problem-users-context
+        description: Problem, target users and context are described.
+      - id: facts-separated
+        description: Confirmed facts, assumptions and hypotheses are separated.
+      - id: alternatives-considered
+        description: Existing alternatives and explicit non-goals are recorded.
+      - id: outcomes-risks-defined
+        description: Desired outcomes, risks and open questions are listed.
+    recycle_target: discovery
+
+  - id: G2
+    name: prd-gate
+    applies_to: prd # docs/product/prd/
+    scope: product-version
+    cadence: per-product-version
+    decision_maker: product-owner
+    human_decision_required: true
+    criteria:
+      - id: sections-complete
+        description: PRD sections 00-06 carry substantive content, not placeholders.
+      - id: mvp-scope-explicit
+        description: MVP scope boundaries are explicit, both in-scope and out-of-scope.
+      - id: no-material-open-questions
+        description: No open question remains that would materially change direction.
+      - id: requirements-traceable
+        description: Functional requirements are expressed so that PBIs can trace back to them.
+    recycle_target: prd # 重大方向问题时打回到 discovery
+
+  - id: G3
+    name: ready-gate # Definition of Ready
+    applies_to: pbi # docs/features/
+    scope: pbi
+    cadence: rolling
+    decision_maker: product-owner-and-architect # 角色决策, 可由 Agent 在角色内执行
+    human_decision_required: false
+    criteria:
+      - id: ac-verifiable
+        description: Acceptance criteria are specific and objectively verifiable.
+      - id: design-ready
+        description: UX/UI artifacts are complete where the PBI has user-facing surface.
+      - id: tech-design-ready
+        description: Technical design is complete where the PBI has architecture impact.
+      - id: tasks-decomposed
+        description: Task DAG covers all acceptance criteria with dependencies stated.
+      - id: dependencies-confirmed
+        description: External and internal dependencies are confirmed available.
+    recycle_target: feature-refinement # 按缺失判据回到 refinement / ux-ui / technical-design / task-planning
+
+  - id: G4
+    name: done-gate # Definition of Done
+    applies_to: pbi # docs/features/
+    scope: pbi
+    cadence: rolling
+    decision_maker: qa-and-product-owner # 角色决策, 可由 Agent 在角色内执行
+    human_decision_required: false
+    criteria:
+      - id: ac-verified
+        description: Every acceptance criterion has matching verification evidence.
+      - id: dod-passed
+        description: All applicable items in .agent/scrum/definition-of-done.md pass.
+      - id: evidence-recorded
+        description: Verification evidence is stored durably and linked from the PBI.
+    recycle_target: implementation
+
+  - id: G5
+    name: release-gate
+    applies_to: release # docs/delivery/releases/
+    scope: release
+    cadence: on-demand
+    decision_maker: product-owner
+    human_decision_required: true
+    criteria:
+      - id: increment-verified
+        description: The integrated increment is verified in a production-like environment.
+      - id: release-notes
+        description: Release notes and user-facing changes are documented.
+      - id: rollback-plan
+        description: A rollback or mitigation plan is recorded.
+      - id: durable-artifacts-committed
+        description: Docs, contracts and other durable artifacts are updated and committed.
+    recycle_target: verification
+
+  - id: GA
+    name: architecture-baseline-gate
+    applies_to: architecture-baseline # docs/architecture/architecture-baseline.md
+    scope: baseline
+    cadence: on-baseline-change
+    decision_maker: architect
+    human_decision_required: true
+    criteria:
+      - id: baseline-substantive
+        description: Architecture Baseline sections carry real content, not headings only.
+      - id: tradeoffs-recorded
+        description: Material trade-offs and constraints are recorded.
+      - id: open-questions-listed
+        description: Open architecture questions are explicit.
+    recycle_target: architecture-discovery
+
+  - id: GB
+    name: architecture-evolution-gate
+    applies_to: adr # docs/architecture/adr/
+    scope: adr
+    cadence: per-adr
+    decision_maker: architect
+    human_decision_required: true
+    criteria:
+      - id: adr-complete
+        description: Context, decision and consequences are recorded.
+      - id: impact-assessed
+        description: Affected repositories and components are identified.
+      - id: human-escalation
+        description: Decisions material to security or cost are escalated to the accountable human.
+    recycle_target: adr-revision

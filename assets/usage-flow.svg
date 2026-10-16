@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b1f"/>
+      <stop offset="1" stop-color="#0d1440"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#22d3ee" stroke-opacity="0.07"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="660" fill="url(#bg)"/>
+  <rect width="1200" height="660" fill="url(#grid)"/>
+  <circle cx="1120" cy="60" r="230" fill="#7c3aed" opacity="0.13"/>
+  <circle cx="60" cy="620" r="250" fill="#0891b2" opacity="0.13"/>
+
+  <text x="50" y="62" font-size="26" font-weight="bold" fill="#f1f5f9">提示词驱动的交付流</text>
+  <text x="50" y="88" font-size="11" fill="#67e8f9" letter-spacing="1.5">PROMPT-DRIVEN DELIVERY · 14 PROMPTS · 7 GATES · ARTIFACTS AS MEMORY</text>
+
+  <rect x="948" y="40" width="204" height="36" rx="18" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa" filter="url(#glow)"/>
+  <text x="1050" y="63" font-size="13" fill="#c4b5fd" text-anchor="middle">GA · GB 架构门</text>
+  <text x="1050" y="100" font-size="10" fill="#8494b8" text-anchor="middle">基线 Baseline · 演进 ADR</text>
+
+  <line x1="200" y1="246" x2="238" y2="246" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="246" x2="428" y2="246" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="580" y1="246" x2="618" y2="246" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="770" y1="246" x2="808" y2="246" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="960" y1="246" x2="998" y2="246" stroke="url(#flow)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g filter="url(#glow)">
+    <rect x="50" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="#22d3ee" stroke-opacity="0.85"/>
+    <rect x="240" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="#22d3ee" stroke-opacity="0.85"/>
+    <rect x="430" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="#22d3ee" stroke-opacity="0.85"/>
+    <rect x="620" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="#22d3ee" stroke-opacity="0.85"/>
+    <rect x="810" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="#22d3ee" stroke-opacity="0.85"/>
+    <rect x="1000" y="200" width="150" height="92" rx="10" fill="#0f1838" fill-opacity="0.92" stroke="url(#flow)" stroke-width="1.5"/>
+  </g>
+
+  <text x="125" y="228" font-size="11" fill="#67e8f9" text-anchor="middle" letter-spacing="2">PRODUCT</text>
+  <text x="125" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">产品发现</text>
+  <text x="125" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">00-discovery</text>
+
+  <text x="315" y="228" font-size="11" fill="#67e8f9" text-anchor="middle" letter-spacing="2">PRD</text>
+  <text x="315" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">需求定义</text>
+  <text x="315" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">01-prd</text>
+
+  <text x="505" y="228" font-size="11" fill="#67e8f9" text-anchor="middle" letter-spacing="2">PBI</text>
+  <text x="505" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">精炼与设计</text>
+  <text x="505" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">02-04 · 06</text>
+
+  <text x="695" y="228" font-size="11" fill="#67e8f9" text-anchor="middle" letter-spacing="2">TASK</text>
+  <text x="695" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">分解与实现</text>
+  <text x="695" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">09-task · 10-impl</text>
+
+  <text x="885" y="228" font-size="11" fill="#67e8f9" text-anchor="middle" letter-spacing="2">VERIFY</text>
+  <text x="885" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">验证收敛</text>
+  <text x="885" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">11-verification</text>
+
+  <text x="1075" y="228" font-size="11" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">RELEASE</text>
+  <text x="1075" y="255" font-size="19" font-weight="bold" fill="#f1f5f9" text-anchor="middle">发布</text>
+  <text x="1075" y="277" font-size="10" fill="#7d8cae" text-anchor="middle">CI/CD · tag</text>
+
+  <line x1="125" y1="292" x2="125" y2="324" stroke="#a78bfa" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <line x1="315" y1="292" x2="315" y2="324" stroke="#a78bfa" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <line x1="505" y1="292" x2="505" y2="324" stroke="#a78bfa" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <line x1="695" y1="292" x2="695" y2="324" stroke="#38bdf8" stroke-opacity="0.5" stroke-dasharray="3 3"/>
+  <line x1="885" y1="292" x2="885" y2="324" stroke="#a78bfa" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+  <line x1="1075" y1="292" x2="1075" y2="324" stroke="#a78bfa" stroke-opacity="0.6" stroke-dasharray="3 3"/>
+
+  <g filter="url(#glow)">
+    <rect x="77" y="326" width="96" height="32" rx="16" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa"/>
+    <rect x="267" y="326" width="96" height="32" rx="16" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa"/>
+    <rect x="457" y="326" width="96" height="32" rx="16" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa"/>
+    <rect x="647" y="326" width="96" height="32" rx="16" fill="#0d1533" fill-opacity="0.9" stroke="#38bdf8" stroke-opacity="0.7"/>
+    <rect x="837" y="326" width="96" height="32" rx="16" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa"/>
+    <rect x="1027" y="326" width="96" height="32" rx="16" fill="#1a1240" fill-opacity="0.9" stroke="#a78bfa"/>
+  </g>
+
+  <text x="125" y="347" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">G1</text>
+  <text x="315" y="347" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">G2</text>
+  <text x="505" y="347" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">G3</text>
+  <text x="695" y="347" font-size="13" font-weight="bold" fill="#7dd3fc" text-anchor="middle">DAG</text>
+  <text x="885" y="347" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">G4</text>
+  <text x="1075" y="347" font-size="13" font-weight="bold" fill="#c4b5fd" text-anchor="middle">G5</text>
+
+  <text x="125" y="378" font-size="10" fill="#8494b8" text-anchor="middle">问题 · 用户 · 价值</text>
+  <text x="315" y="378" font-size="10" fill="#8494b8" text-anchor="middle">范围双向明确</text>
+  <text x="505" y="378" font-size="10" fill="#8494b8" text-anchor="middle">就绪：AC 可验 · 设计齐</text>
+  <text x="695" y="378" font-size="10" fill="#8494b8" text-anchor="middle">随 PBI 过 G3</text>
+  <text x="885" y="378" font-size="10" fill="#8494b8" text-anchor="middle">完成：证据齐备</text>
+  <text x="1075" y="378" font-size="10" fill="#8494b8" text-anchor="middle">可发布：BOM · 回滚</text>
+
+  <text x="600" y="426" font-size="13" fill="#cbd5e1" text-anchor="middle">每阶段一个会话：粘贴提示词指令段 → agent 读制品起草 → 人审 → 门决策落记录</text>
+
+  <line x1="50" y1="470" x2="1150" y2="470" stroke="#1e2a52" stroke-width="1"/>
+  <text x="50" y="504" font-size="12" fill="#67e8f9" letter-spacing="2">ROLES 角色</text>
+  <text x="1150" y="504" font-size="11" fill="#8494b8" text-anchor="end">人做门决策 · agent 代劳执行与 git</text>
+
+  <g>
+    <rect x="50" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="210" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="370" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="530" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="690" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="850" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#2b3f7a"/>
+    <rect x="1010" y="520" width="140" height="40" rx="8" fill="#0d1533" stroke="#22d3ee" stroke-opacity="0.8" filter="url(#glow)"/>
+  </g>
+
+  <text x="120" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">PO 产品负责人</text>
+  <text x="120" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">门决策 G1 · G2 · G5</text>
+
+  <text x="280" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Designer 设计</text>
+  <text x="280" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">UX · UI 制品</text>
+
+  <text x="440" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Architect 架构</text>
+  <text x="440" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">基线 · 门决策 GA GB</text>
+
+  <text x="600" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Developer 开发</text>
+  <text x="600" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">技术设计 · Task 实现</text>
+
+  <text x="760" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">QA 测试</text>
+  <text x="760" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">AC 验证 · G4</text>
+
+  <text x="920" y="537" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">DevOps 平台</text>
+  <text x="920" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">CI/CD · 发布执行</text>
+
+  <text x="1080" y="537" font-size="12" font-weight="bold" fill="#7dd3fc" text-anchor="middle">Agent</text>
+  <text x="1080" y="552" font-size="9.5" fill="#94a3b8" text-anchor="middle">起草 · 执行 · git</text>
+
+  <text x="600" y="612" font-size="12" fill="#7d8cae" text-anchor="middle">制品即记忆：上下文只从文件读取，不从聊天记录 · 状态视图由 scripts/build-status.py 自动生成</text>
+</svg>

@@ -1,0 +1,8 @@
+sprint:
+  id: SPRINT-001
+  status: planned # 生命周期: planned | active | closed
+  goal: ""
+  start: ""
+  end: ""
+  selected_pbis: []
+  definition_of_done: .agent/scrum/definition-of-done.md

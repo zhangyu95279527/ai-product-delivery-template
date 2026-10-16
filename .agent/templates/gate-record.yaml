@@ -1,0 +1,12 @@
+id: GATE-RECORD-0001
+gate: G3 # 门的编号: G1 | G2 | G3 | G4 | G5 | GA | GB
+artifact: PBI-0001 # 被门控的制品 id 或路径
+decision: go # 决策: go(放行) | recycle(打回上游) | hold(挂起)
+criteria_met: [] # 已满足的判据 id, 对应 .agent/gates/gates.yaml
+criteria_failed: [] # 未满足的判据 id
+decided_by: "" # 决策人; human_decision_required = true 的门必填
+role: "" # 决策时承担的角色; 角色/Agent 决策时填写
+date: "" # 决策日期, 格式 YYYY-MM-DD
+recycle_target: "" # decision = recycle 时必填, 打回的目标阶段
+follow_up: [] # decision = recycle | hold 时必填, 解除状态的后续动作
+notes: ""

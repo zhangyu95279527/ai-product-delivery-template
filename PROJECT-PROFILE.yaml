@@ -1,0 +1,25 @@
+product:
+  name: ""
+  type: "internet-product"
+  stage: "discovery"
+
+delivery:
+  method: "scrum" # scrum | kanban | hybrid
+  sprint_length: "2-weeks"
+
+ai:
+  enabled: true
+  coding_agents:
+    - codex
+    - claude-code
+
+engineering:
+  source_control: git
+  issue_tracker: ""
+  design_tool: ""
+  ci: ""
+  cd: ""
+
+architecture:
+  style: "to-be-determined"
+  repository_strategy: "architecture-driven"

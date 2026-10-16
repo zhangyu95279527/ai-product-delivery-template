@@ -1,0 +1,13 @@
+id: PBI-0001
+type: user-story # user-story | bug | spike | tech-debt | other
+feature_id: FEAT-000
+status: draft # 执行态: draft | ready | in-progress | in-verification | done
+title: ""
+value: ""
+user_story:
+  as_a: ""
+  i_want: ""
+  so_that: ""
+acceptance_criteria: []
+dependencies: []
+references: []
