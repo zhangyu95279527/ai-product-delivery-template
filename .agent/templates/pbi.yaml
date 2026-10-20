@@ -2,6 +2,7 @@ id: PBI-0001
 type: user-story # user-story | bug | spike | tech-debt | other
 feature_id: FEAT-000
 status: draft # 执行态: draft | ready | in-progress | in-verification | done
+owner_role: "" # 责任角色简称: PO | Designer | Architect | Developer | QA | DevOps; 空缺时状态视图按执行态自动归属
 title: ""
 value: ""
 user_story:
@@ -10,4 +11,4 @@ user_story:
   so_that: ""
 acceptance_criteria: []
 dependencies: []
-references: []
+references: [] # 引用制品路径: PRD 节/UX/UI/技术设计等, 精炼与执行会话按需读取

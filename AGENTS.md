@@ -29,7 +29,8 @@ Before completion: report changed artifacts/files, verification evidence, unmet 
 
 Context discipline:
 - One prompt scopes one session; do not carry one stage's chat into another stage.
-- Read only the artifacts named by the prompt's gate context and the task at hand. Artifacts, not chat history, are project memory.
+- Read in layers. Fixed: this file, the stage prompt and its listed skill. On demand: only the paths in the prompt's Context block. Locate project state via `docs/delivery/status.md`; search to find anything not listed, never sweep `docs/` wholesale. `EXAMPLE.md` and `OPERATING-GUIDE.md` are human onboarding material; do not read them in stage sessions.
+- Artifacts, not chat history, are project memory: read only the artifacts named by the prompt and the task at hand.
 - When work outgrows one session, write a checkpoint from `.agent/templates/checkpoint.md`; resume from the checkpoint plus the artifacts, never by re-reading chat scrollback.
 
 ## Traceability

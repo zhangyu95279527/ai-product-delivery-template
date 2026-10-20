@@ -4,4 +4,9 @@
 
 Gate context: rolling preparation toward gate G3 (ready); output = PBIs approaching ready state. Sprint Planning realizes G3 as a batch decision.
 
+Context:
+- Fixed read: `AGENTS.md` and the skill file below.
+- On demand: the selected PBIs in `docs/features/`, the paths in their `references`, and only the PRD section files relevant to them.
+- Do not read: `EXAMPLE.md` or `OPERATING-GUIDE.md`; never sweep `docs/` wholesale, search to locate anything not listed.
+
 Skills: ../skills/writing-acceptance-criteria.md

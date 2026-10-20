@@ -28,10 +28,10 @@
 ### 快速开始
 
 1. **拷贝模板**到自己的产品仓库，提交基线
-2. **填写** [PROJECT-PROFILE.yaml](PROJECT-PROFILE.yaml)：产品名、交付方式、agent 类型
-3. **选择交付方式**：通用迭代（默认）或 Scrum（启用 `.agent/scrum/`）
-4. **启动发现**：把 [.agent/prompts/00-discovery.md](.agent/prompts/00-discovery.md) 作为系统提示词开新会话
-5. 之后每个阶段：**人带门决策 → agent 按提示词起草 → 门记录落盘 → 进入下一阶段**
+2. **实例化**：开新会话粘贴 [.agent/prompts/instantiate.md](.agent/prompts/instantiate.md)；agent 引导收集产品名、交付方式与团队名册，自动填写 PROJECT-PROFILE.yaml 与 `.agent/local/`，并列出需手工完成的平台配置
+3. **启动发现**：把 [.agent/prompts/00-discovery.md](.agent/prompts/00-discovery.md) 作为系统提示词开新会话
+4. 之后每个阶段：**人带门决策 → agent 按提示词起草 → 门记录落盘 → 进入下一阶段**
+5. 随时查状态：开新会话粘贴 [.agent/prompts/status-query.md](.agent/prompts/status-query.md)，直接问"项目到什么状态了"或"我是谁、该干什么"
 
 ### 核心概念
 
@@ -48,7 +48,7 @@
 ```
 .agent/            模板域：门定义、提示词、角色、技能、制品模板（实例不改动）
   gates/           7 门判据定义
-  prompts/         14 个阶段提示词（00 发现 → 13 回顾）
+  prompts/         14 个阶段提示词（00 发现 → 13 回顾）+ instantiate / status-query 两个会话入口
   roles/           角色目录与 A/R/C 矩阵
   scrum/           Scrum 交付方式（可选启用）
   skills/          agent 技能（验收标准写作、Task 分解、验证证据收集）

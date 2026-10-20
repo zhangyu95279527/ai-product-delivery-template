@@ -2,7 +2,23 @@
 
 Derived from repository artifacts by `scripts/build-status.py`. Do not edit by hand; regenerate instead.
 
-Generated: 2026-09-30
+Generated: 2026-10-20
+
+## Stage progress
+
+| Stage | State | Detail |
+|---|---|---|
+| Discovery (G1) | pending | — |
+| PRD (G2) | pending | — |
+| Architecture baseline (GA) | pending | on-demand |
+| Backlog & refinement (G3) | pending | no PBIs yet |
+| Implementation & verification (G4) | pending | no PBI passed G3 yet |
+| Release (G5) | pending | no release yet |
+
+## Next actions by role
+
+### PO
+- 完成 Product Brief 并提交 G1 评审（00-discovery）
 
 ## Product
 

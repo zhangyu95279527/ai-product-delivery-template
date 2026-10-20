@@ -151,6 +151,8 @@ git push -u origin main
 
 实例化清单：
 
+推荐入口：开新会话粘贴 [.agent/prompts/instantiate.md](.agent/prompts/instantiate.md)，agent 按此清单引导收集信息，并代劳第 2 步与首份状态视图生成；手工执行时按下列各步。
+
 1. 执行上述命令；`TEMPLATE-VERSION` 随 clone 带过来，即为实例的模板基线版本。
 2. 在 `.agent/local/` 建 `project-context.md`，写项目约定与背景。
 3. 平台配置：main 分支保护；required reviewers 映射 G1/G2/G5/GA/GB 的责任人（人工门由 PR 评审承载）；按团队划分交付仓与代码仓权限（PRD 可能商业敏感）。

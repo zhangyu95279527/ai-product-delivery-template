@@ -1,12 +1,13 @@
 id: TASK-0001
 pbi_id: PBI-0001
 status: draft # 执行态: draft | ready | in-progress | in-verification | done
+owner_role: "" # 责任角色简称: PO | Designer | Architect | Developer | QA | DevOps
 objective: ""
 depends_on: []
-inputs: []
+inputs: [] # 执行上下文清单: 实现本 Task 需读取的精确文件路径, 执行会话只读这些文件
 affected_repositories: []
 affected_components: []
-allowed_scope: []
+allowed_scope: [] # 允许改动的代码/测试范围, 执行会话不得超出
 verification: []
 executor:
   mode: agent # human | agent | hybrid

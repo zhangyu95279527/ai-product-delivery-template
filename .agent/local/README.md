@@ -5,6 +5,7 @@
 实例可在此放置：
 
 - `project-context.md`：项目级约定、背景、术语，作为 agent 会话的项目上下文
+- `team.yaml`：团队名册（人名 → 角色映射），由实例化会话从 `.agent/templates/team.yaml` 复制并填写
 - `gate-criteria.md`：项目级附加门判据，对 `.agent/gates/gates.yaml` 的补充，由 agent 在门评审时一并执行
 - 其他实例专属配置
 
