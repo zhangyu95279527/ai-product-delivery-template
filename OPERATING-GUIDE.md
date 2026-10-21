@@ -118,6 +118,21 @@ Product Backlog
 
 原则（详见 `AGENTS.md`）：main 保持可发布；有意义的变更用短生命周期分支；提交持久制品与完成的增量；绝不提交秘密或私有数据。
 
+### 分支与 tag
+
+命名模式：`<类型>-<标识>[-<简述>]`，只用小写字母、数字、连字符（跨平台与工具链安全）；实例可在 `.agent/local/project-context.md` 改写。提交信息锚点模式与全程历史示例见 `EXAMPLE.md` 第 11-12 节。
+
+| 分支 | 所在仓 | 用途 | 合并要求 |
+|---|---|---|---|
+| `<门>-<制品>`（如 `g1-product-brief`、`ga-baseline`） | 交付仓 | 承载一个人工门（G1/G2/G5/GA/GB）的制品与门记录 | PR 评审即门决策，过门即合并；recycle 返工沿用原分支 |
+| `task-<id>-<简述>`（如 `task-0001-page-skeleton`） | 代码仓 | Task 粒度实现 | 带齐 G4 证据后合并回 main；recycle 返工沿用原分支 |
+| `fix-...` / `chore-...` | 所有仓 | 不挂门或 Task 的变更（含模板仓全部工作） | 短分支 PR |
+| `hotfix-v1.2.1-简述` | 代码仓 | 从受影响 release tag 切出修生产问题 | 修复回合 main（有 release 分支时连同 release 分支）再打补丁 tag；回合 main 不可省 |
+| `release-x.y.z` | 代码仓 | 已发布版本线需要补丁时，从对应 tag 按需切出 | 不预建 |
+| `template-upgrade-v<version>` | 交付仓 | 模板升级（见下文模板升级节） | PR 承载升级前的 diff 审视，merge 后删除 |
+
+tag 语义：实例产品发布在 G5 过门后于 main 打 semver tag（如 `v1.2.0`）；多仓产品的组件版本组合钉在 `docs/delivery/releases/` 发布记录（Release BOM）。模板发布打与 `TEMPLATE-VERSION` 同名的 tag，迁移要点写进提交说明。
+
 ### 仓库结构
 
 多组件、多团队产品采用三层结构：

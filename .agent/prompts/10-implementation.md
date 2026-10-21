@@ -4,6 +4,8 @@
 
 Gate context: input = Task of a G3-passed PBI (status: ready); the Task moves in-progress → in-verification and its evidence feeds gate G4.
 
+Git: cut branch task-<id>-<slug> at start; commit with anchor TASK-<id>; merge back to main only after G4 go with evidence attached; recycle rework stays on the same branch.
+
 Context:
 - Fixed read: `AGENTS.md` and the skill file below.
 - On demand: only the files listed in the Task's `inputs`; code and tests within the Task's `allowed_scope`.

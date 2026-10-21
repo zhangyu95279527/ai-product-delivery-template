@@ -4,6 +4,8 @@
 
 Gate context: input = refined PBI (pre-G3); output = Task DAG feeding G3 criterion tasks-decomposed. New Tasks start at status: draft.
 
+Git: rolling artifacts with no gate event of their own; push the Task DAG directly to main with commit anchor PBI-<id>.
+
 Context:
 - Fixed read: `AGENTS.md` and the skill file below.
 - On demand: the selected PBI in `docs/features/`, the paths in its `references` (UX/UI, technical design), `.agent/templates/task.yaml`.

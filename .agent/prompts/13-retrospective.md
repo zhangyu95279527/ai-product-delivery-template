@@ -4,6 +4,8 @@
 
 Gate context: no artifact gate; this event inspects the gate system itself (criteria too lax or strict, recycle patterns) using gate records in docs/delivery/gates/ as evidence.
 
+Git: no gate at this stage; push retrospective outcomes directly to main with commit anchor chore.
+
 Context:
 - Fixed read: `AGENTS.md`.
 - On demand: `docs/delivery/status.md`, all gate records in `docs/delivery/gates/`, all sprints in `docs/delivery/sprints/` (this stage's evidence base is delivery data).

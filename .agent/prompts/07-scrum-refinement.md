@@ -4,6 +4,8 @@
 
 Gate context: rolling preparation toward gate G3 (ready); output = PBIs approaching ready state. Sprint Planning realizes G3 as a batch decision.
 
+Git: G3 is a rolling gate; push refined PBIs directly to main with commit anchor PBI-<id>; gate events use anchor G3 go / G3 recycle.
+
 Context:
 - Fixed read: `AGENTS.md` and the skill file below.
 - On demand: the selected PBIs in `docs/features/`, the paths in their `references`, and only the PRD section files relevant to them.

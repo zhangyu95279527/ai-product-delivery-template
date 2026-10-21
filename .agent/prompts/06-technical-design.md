@@ -4,6 +4,8 @@
 
 Gate context: input = Architecture Baseline approved at gate GA plus the refined PBI; output = Feature Technical Design feeding G3 criterion tech-design-ready. Baseline gaps route to gate GB, never silent change.
 
+Git: G3 is a rolling gate; push the Feature Technical Design directly to main with commit anchor PBI-<id>; baseline gaps route to gate GB as an ADR PR, never silent change.
+
 Context:
 - Fixed read: `AGENTS.md`.
 - On demand: `docs/delivery/status.md`, `docs/architecture/architecture-baseline.md`, the selected PBI in `docs/features/` and the paths in its `references`; ADRs in `docs/architecture/adr/` only when referenced.

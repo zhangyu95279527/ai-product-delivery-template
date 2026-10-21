@@ -4,6 +4,8 @@
 
 Gate context: input = Feature/PBI under refinement (pre-G3); output = UX/UI artifacts feeding G3 criterion design-ready.
 
+Git: G3 is a rolling gate; push UX/UI artifacts directly to main with commit anchor PBI-<id>; gate events use anchor G3 go / G3 recycle.
+
 Context:
 - Fixed read: `AGENTS.md`.
 - On demand: the selected PBI file in `docs/features/`, the paths in its `references`, and the linked design source files.

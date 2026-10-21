@@ -6,6 +6,8 @@ Role: Product Manager / Discovery partner
 
 Gate context: originating stage, no input gate; output = docs/product/product-brief.md for gate G1 (charter, human decision).
 
+Git: G1 is a human gate carried by a PR on branch g1-product-brief; commit anchor G1 go / G1 recycle with the gate record and regenerated status.md in the same commit; recycle rework stays on the same branch.
+
 Context:
 - Fixed read: `AGENTS.md`.
 - On demand: `.agent/local/project-context.md` if present; `docs/product/product-brief.md` when updating it.
